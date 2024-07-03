@@ -1,10 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
-import { ROW } from "@/constants/variable";
+import { EMPTY_GRID } from "@/constants/variable";
 import Square from "../Square";
 import { BoardStyle } from "./style.index";
-
-const emptyGrid = new Array(ROW ** 2).fill(null);
 
 type Props = {
   squares: Array<string>;
@@ -14,7 +12,7 @@ type Props = {
 const Board = ({ squares, onClick }: Props) => {
   return (
     <div css={BoardStyle.wrapper}>
-      {emptyGrid.map((_, index) => (
+      {EMPTY_GRID.map((_, index) => (
         <Square
           key={index}
           value={squares[index]}

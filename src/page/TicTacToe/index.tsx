@@ -5,6 +5,7 @@ import ModalAnnouncement from "@/components/ModalAnnouncement";
 import { calculateWinner } from "@/utils/calculateWinner";
 import { useState } from "react";
 import { TicTacToeStyle } from "./style.index";
+import { BOARD_SIZE, EMPTY_GRID } from "@/constants/variable";
 
 interface GamesState {
   squares: Array<string>;
@@ -15,18 +16,18 @@ interface GamesState {
 
 function TicTacToe() {
   const [state, setState] = useState<GamesState>({
-    squares: Array(9).fill(""),
+    squares: EMPTY_GRID,
     xIsNext: true,
     isGameOver: false,
     statusMessage: "",
   });
 
   const handleClick = (i: number) => {
-    if (calculateWinner(state.squares) || state.squares[i]) return;
+    if (calculateWinner(state.squares, BOARD_SIZE) || state.squares[i]) return;
     const newSquares = [...state.squares];
     newSquares[i] = state.xIsNext ? "X" : "O";
 
-    const winner = calculateWinner(newSquares);
+    const winner = calculateWinner(newSquares, BOARD_SIZE);
     const isDraw = newSquares.every((square) => square !== "");
 
     setState({
@@ -44,7 +45,7 @@ function TicTacToe() {
 
   const handleRestart = () => {
     setState({
-      squares: Array(9).fill(""),
+      squares: EMPTY_GRID,
       xIsNext: true,
       isGameOver: false,
       statusMessage: "",
