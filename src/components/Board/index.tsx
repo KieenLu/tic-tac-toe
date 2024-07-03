@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
+import { ROW } from "../constants/variable";
 import Square from "../Square";
 import { BoardStyle } from "./style.index";
 
-const ROW = 3;
 const emptyGrid = new Array(ROW ** 2).fill(null);
 
 type Props = {

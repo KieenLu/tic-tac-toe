@@ -20,7 +20,7 @@ export const ModalAnnouncementStyle = {
     position: absolute;
     overflow: hidden;
 
-    padding: 10px 30px;
+    padding: 15px 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,20 +35,20 @@ export const ModalAnnouncementStyle = {
     transform: translateX(50%);
 
     p {
-      font-size: 20px;
-
+      font-size: 36px;
       ${media.lg} {
-        font-size: 18px;
+        font-size: 32px;
       }
-
       ${media.md} {
-        font-size: 14px;
+        font-size: 22px;
       }
     }
 
     button {
       padding: 10px 25px;
       cursor: pointer;
+
+      font-size: 22px;
     }
   `,
 };
