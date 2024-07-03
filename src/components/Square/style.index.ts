@@ -1,6 +1,6 @@
+import { SQUARE_SIZE } from "@/constants/variable";
 import { media } from "@/styles/breakpoints";
 import { css } from "@emotion/react";
-import { SQUARE_SIZE } from "../constants/variable";
 
 export const SquareStyle = {
   wrapper: css`
