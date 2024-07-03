@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { ROW } from "../constants/variable";
+import { ROW } from "@/constants/variable";
 import Square from "../Square";
 import { BoardStyle } from "./style.index";
 
